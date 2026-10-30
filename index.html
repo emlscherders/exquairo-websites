@@ -1,24 +1,23 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Discover the Infant Motor Profile (IMP), a video-based assessment of infant motor behaviour.">
-<title>Infant Motor Profile | Understanding infant motor behaviour</title>
+<title>Infant Motor Profile | UMCG</title>
 
 <style>
 :root {
-  --ink: #243b3b;
-  --muted: #617575;
-  --teal: #2f7772;
-  --teal-dark: #245d59;
-  --sage: #e8f0eb;
-  --cream: #f8f7f2;
-  --peach: #f3e4d9;
-  --line: #dce5df;
-  --white: #fff;
-  --shadow: 0 14px 38px rgba(36,59,59,.09);
+  --navy: #173c56;
+  --petrol: #07566a;
+  --turquoise: #00a6a6;
+  --coral: #f07868;
+  --light: #f2f9fa;
+  --pale: #e3f5f3;
+  --ink: #203b50;
+  --muted: #607887;
+  --white: #ffffff;
 }
 
 * { box-sizing: border-box; }
@@ -27,16 +26,14 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  color: var(--ink);
-  background: var(--cream);
-  font-family: Inter, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.65;
+  color: var(--ink);
+  background: #fff;
 }
 
-a { color: var(--teal-dark); }
-
 .wrap {
-  width: min(1120px, calc(100% - 40px));
+  width: min(1140px, 92%);
   margin: auto;
 }
 
@@ -44,292 +41,300 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(248,247,242,.94);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 2px 14px rgba(0,0,0,.06);
 }
 
 .nav {
-  min-height: 72px;
+  min-height: 76px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  align-items: center;
+  gap: 20px;
 }
 
 .brand {
+  text-decoration: none;
+  color: var(--petrol);
   font-weight: 800;
   letter-spacing: .04em;
-  color: var(--teal-dark);
-  text-decoration: none;
 }
 
-.brand span {
+.brand small {
   display: block;
-  font-size: .68rem;
-  letter-spacing: .15em;
+  font-size: 11px;
+  letter-spacing: .12em;
   color: var(--muted);
+  font-weight: 500;
 }
 
 nav {
   display: flex;
-  gap: 22px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 nav a {
-  text-decoration: none;
-  font-size: .9rem;
   color: var(--ink);
+  text-decoration: none;
+  font-size: 14px;
 }
 
-nav a:hover { color: var(--teal); }
+nav a:hover { color: var(--turquoise); }
 
 .hero {
-  padding: 82px 0 74px;
-  min-height: 570px;
+  min-height: 610px;
   display: flex;
   align-items: center;
   background:
-    linear-gradient(110deg,
-      rgba(248,247,242,.97) 0%,
-      rgba(248,247,242,.91) 46%,
-      rgba(248,247,242,.24) 100%),
+    linear-gradient(90deg,
+      rgba(240,249,250,.98) 0%,
+      rgba(240,249,250,.90) 43%,
+      rgba(240,249,250,.15) 100%),
     url("images/imp-hero.jpg") center/cover no-repeat;
 }
 
-.hero-copy { max-width: 650px; }
+.hero-copy { max-width: 700px; padding: 65px 0; }
 
 .eyebrow {
+  color: var(--turquoise);
   text-transform: uppercase;
   letter-spacing: .17em;
-  color: var(--teal);
-  font-size: .75rem;
+  font-size: 12px;
   font-weight: 800;
 }
 
 h1 {
-  font-size: clamp(2.7rem, 6vw, 5rem);
-  line-height: 1.02;
-  letter-spacing: -.045em;
-  margin: 16px 0 22px;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -.04em;
+  color: var(--navy);
+  margin: 18px 0;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.12;
-  letter-spacing: -.035em;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.15;
+  color: var(--navy);
   margin: 0 0 18px;
 }
 
-h3 { margin: 0 0 8px; }
+h3 { color: var(--petrol); margin-top: 0; }
 
-p { margin: 0 0 16px; }
+p { margin-top: 0; }
 
 .lead {
-  font-size: 1.18rem;
-  color: #435c5b;
-  max-width: 610px;
+  font-size: 19px;
+  color: #405e70;
+  max-width: 630px;
 }
 
-.actions {
+.affiliation {
+  border-left: 4px solid var(--coral);
+  padding-left: 16px;
+  margin-top: 25px;
+  color: var(--petrol);
+  font-weight: bold;
+}
+
+.affiliation span {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--muted);
+}
+
+.buttons {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
   margin-top: 28px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 19px;
-  border-radius: 999px;
+  padding: 13px 23px;
+  border-radius: 30px;
   text-decoration: none;
-  font-weight: 700;
-  background: var(--teal);
+  background: var(--turquoise);
   color: white;
+  font-weight: bold;
 }
 
-.btn.secondary {
+.btn:hover { background: var(--petrol); }
+
+.btn.outline {
   background: transparent;
-  color: var(--teal-dark);
-  border: 1px solid var(--teal);
+  border: 2px solid var(--petrol);
+  color: var(--petrol);
 }
 
-section { padding: 82px 0; }
+section { padding: 85px 0; }
 
-.section-intro {
-  max-width: 720px;
-  margin-bottom: 34px;
+.light { background: var(--light); }
+.turquoise-bg { background: var(--pale); }
+.coral-bg { background: #fff1ec; }
+
+.intro {
+  max-width: 730px;
+  margin-bottom: 35px;
 }
-
-.soft { background: var(--sage); }
-.peach { background: #f4ebe4; }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 22px;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
 }
 
-.three { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.three {
+  grid-template-columns: repeat(3,1fr);
+}
 
 .card {
   background: white;
   padding: 27px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
+  border-radius: 17px;
+  box-shadow: 0 10px 32px rgba(23,60,86,.09);
 }
 
 .number {
-  color: var(--teal);
-  font-size: .8rem;
-  font-weight: 800;
-  letter-spacing: .12em;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--coral);
+  letter-spacing: .15em;
 }
 
 .photo {
-  min-height: 230px;
-  border-radius: 18px;
-  background: #dfe9e3 center/cover no-repeat;
-  display: flex;
-  align-items: end;
-  padding: 18px;
-  color: white;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 17px;
+  display: block;
+  background: #e5f5f4;
 }
 
-.photo::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(transparent,rgba(20,45,43,.55));
+.photo-caption {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 8px;
 }
-
-.photo span {
-  position: relative;
-  font-weight: 700;
-}
-
-.photo.one { background-image: url("images/infant-tummy-time.jpg"); }
-.photo.two { background-image: url("images/infant-reaching.jpg"); }
-.photo.three { background-image: url("images/infant-sitting.jpg"); }
 
 .domain-card { min-height: 190px; }
-.domain-card p { color: var(--muted); margin-bottom: 0; }
+
+.domain-card p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
 
 .video-card {
   padding: 0;
   overflow: hidden;
 }
 
-.video-thumb {
+.video-card iframe,
+.video-card video {
+  width: 100%;
   aspect-ratio: 16/9;
-  background: linear-gradient(135deg,#d8e7df,#f1e5db);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  border: 0;
+  background: #dcebed;
 }
 
-.play {
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: white;
-  color: var(--teal);
-  font-size: 1.45rem;
-  box-shadow: var(--shadow);
-}
+.video-description { padding: 22px; }
 
-.video-body { padding: 20px 22px 24px; }
-
-.video-body p {
+.video-description p {
+  font-size: 14px;
   color: var(--muted);
-  font-size: .94rem;
 }
 
-.pub-list {
+.tag {
+  display: inline-block;
+  background: var(--pale);
+  color: var(--petrol);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 9px;
+}
+
+.publications {
   display: grid;
   gap: 13px;
 }
 
 .publication {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 13px;
-  padding: 17px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
+  background: white;
+  border: 1px solid #e0ebee;
+  padding: 19px 22px;
+  border-radius: 12px;
+}
+
+.publication h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .publication p {
-  margin: 4px 0 0;
   color: var(--muted);
-  font-size: .91rem;
+  font-size: 13px;
+  margin: 0;
 }
 
 .pub-link {
   white-space: nowrap;
-  font-weight: 750;
   text-decoration: none;
+  font-weight: bold;
+  color: var(--turquoise);
 }
 
-.tag {
-  display: inline-block;
-  font-size: .72rem;
-  font-weight: 800;
-  color: var(--teal-dark);
-  background: var(--sage);
-  padding: 4px 9px;
-  border-radius: 20px;
-  margin-bottom: 7px;
-}
+.pub-link:hover { color: var(--coral); }
 
 .note {
-  font-size: .9rem;
+  font-size: 13px;
   color: var(--muted);
+  margin-top: 20px;
 }
 
 .contact {
-  background: var(--teal-dark);
+  background: var(--navy);
   color: white;
 }
 
-.contact a { color: white; }
+.contact h2 { color: white; }
+.contact .eyebrow { color: #65d6d1; }
+.contact a { color: #7ee0da; }
 
 footer {
-  padding: 25px 0;
-  color: var(--muted);
-  font-size: .85rem;
+  background: #102e43;
+  color: #d5e6ec;
+  padding: 30px 0;
+  font-size: 13px;
 }
 
-@media (max-width:760px) {
+@media(max-width:760px) {
   .nav {
+    flex-direction: column;
     align-items: flex-start;
     padding: 15px 0;
-    flex-direction: column;
   }
 
-  nav { gap: 12px 17px; }
-
-  .hero {
-    min-height: 520px;
-    padding: 65px 0;
-  }
+  nav { gap: 12px; }
 
   .grid, .three { grid-template-columns: 1fr; }
 
-  section { padding: 62px 0; }
+  section { padding: 60px 0; }
 
   .publication {
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
   }
+
+  .hero { min-height: 530px; }
 }
 </style>
 </head>
@@ -337,21 +342,24 @@ footer {
 <body>
 
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#home">
-      INFANT MOTOR PROFILE
-      <span>ASSESSING INFANT MOTOR BEHAVIOUR</span>
-    </a>
+<div class="wrap nav">
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#domains">Five domains</a>
-      <a href="#videos">Videos</a>
-      <a href="#clinical">Clinical use</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<a href="#home" class="brand">
+INFANT MOTOR PROFILE
+<small>ASSESSING INFANT MOTOR BEHAVIOUR</small>
+</a>
+
+<nav>
+<a href="#about">About</a>
+<a href="#domains">Five domains</a>
+<a href="#videos">Videos</a>
+<a href="#clinical">Clinical use</a>
+<a href="#research">Publications</a>
+<a href="#training">Training</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
 </header>
 
 <main>
@@ -359,474 +367,547 @@ footer {
 <!-- HOME -->
 
 <section class="hero" id="home">
-  <div class="wrap">
-    <div class="hero-copy">
-      <div class="eyebrow">
-        A video-based assessment of infant motor behaviour
-      </div>
+<div class="wrap">
+<div class="hero-copy">
 
-      <h1>
-        Look beyond<br>
-        motor milestones.
-      </h1>
+<div class="eyebrow">
+A video-based assessment of infant motor behaviour
+</div>
 
-      <p class="lead">
-        The Infant Motor Profile (IMP) provides a detailed
-        picture of how infants move — combining motor
-        performance with the quality and diversity of
-        their movement behaviour.
-      </p>
+<h1>Look beyond<br>motor milestones.</h1>
 
-      <div class="actions">
-        <a class="btn" href="#about">Discover the IMP</a>
-        <a class="btn secondary" href="#research">
-          Explore the evidence
-        </a>
-      </div>
-    </div>
-  </div>
+<p class="lead">
+The Infant Motor Profile (IMP) provides a detailed picture
+of how infants move — combining motor performance with
+the quality and diversity of their movement behaviour.
+</p>
+
+<div class="affiliation">
+Developmental Neurology
+<span>Beatrix Children's Hospital · University Medical Center Groningen</span>
+</div>
+
+<div class="buttons">
+<a href="#about" class="btn">Discover the IMP</a>
+<a href="#training" class="btn outline">Become an IMP user</a>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- ABOUT -->
 
 <section id="about">
-  <div class="wrap grid">
+<div class="wrap grid">
 
-    <div>
-      <div class="eyebrow">About the assessment</div>
+<div>
+<div class="eyebrow">About the assessment</div>
+<h2>What is the Infant Motor Profile?</h2>
 
-      <h2>What is the Infant Motor Profile?</h2>
+<p>
+The Infant Motor Profile is a video-based assessment
+designed to evaluate motor behaviour in infants aged
+3 to 18 months.
+</p>
 
-      <p>
-        The Infant Motor Profile is a video-based assessment
-        designed to evaluate motor behaviour in infants aged
-        approximately 3 to 18 months.
-      </p>
+<p>
+The IMP considers not only which motor skills an infant
+has achieved, but also the quality of the movements used
+to explore and interact with the environment.
+</p>
 
-      <p>
-        It considers not only which motor skills an infant
-        has achieved, but also the quality of the movements
-        used to explore and interact with the environment.
-      </p>
+<p>
+By observing an infant in a range of positions and
+situations, the IMP captures both motor performance
+and qualitative aspects of motor behaviour.
+</p>
 
-      <p>
-        By observing an infant in a range of positions and
-        situations, the IMP captures both motor performance
-        and qualitative aspects of motor behaviour.
-      </p>
+<p>
+The assessment provides a broader picture of early
+motor development and may contribute to understanding
+individual developmental trajectories.
+</p>
+</div>
 
-      <p class="note">
-        Add a personal introduction about the development
-        of the IMP and the scientific questions behind it.
-      </p>
-    </div>
+<div>
+<img class="photo"
+src="images/infant-tummy-time.jpg"
+alt="Infant exploring movement">
 
-    <div class="grid">
-      <div class="photo one">
-        <span>Exploring movement</span>
-      </div>
+<p class="photo-caption">
+Understanding movement from early infancy.
+</p>
+</div>
 
-      <div class="photo two">
-        <span>Reaching and interacting</span>
-      </div>
-
-      <div class="photo three"
-           style="grid-column:1/-1;min-height:180px">
-        <span>Developing motor skills</span>
-      </div>
-    </div>
-
-  </div>
+</div>
 </section>
 
 <!-- FIVE DOMAINS -->
 
-<section class="soft" id="domains">
-  <div class="wrap">
+<section class="turquoise-bg" id="domains">
+<div class="wrap">
 
-    <div class="section-intro">
-      <div class="eyebrow">The framework</div>
-      <h2>Five complementary domains</h2>
+<div class="intro">
+<div class="eyebrow">The IMP framework</div>
+<h2>Five complementary domains</h2>
 
-      <p>
-        The IMP combines one domain describing motor
-        milestone performance with four domains that focus
-        on qualitative aspects of motor behaviour.
-      </p>
-    </div>
+<p>
+The IMP evaluates infant motor behaviour in five domains.
+Together, these domains provide a multidimensional profile
+of motor development.
+</p>
+</div>
 
-    <div class="grid three">
+<div class="grid three">
 
-      <article class="card domain-card">
-        <div class="number">01</div>
-        <h3>Variation</h3>
-        <p>
-          The variety of motor behaviour and movement
-          strategies an infant demonstrates.
-        </p>
-      </article>
+<div class="card domain-card">
+<div class="number">01</div>
+<h3>Variation</h3>
+<p>
+The variety of motor behaviour and movement strategies
+an infant demonstrates.
+</p>
+</div>
 
-      <article class="card domain-card">
-        <div class="number">02</div>
-        <h3>Adaptability</h3>
-        <p>
-          The ability to select and adapt motor strategies
-          to changing situations and goals.
-        </p>
-      </article>
+<div class="card domain-card">
+<div class="number">02</div>
+<h3>Adaptability</h3>
+<p>
+The ability to select and adapt motor strategies
+to changing situations and goals.
+</p>
+</div>
 
-      <article class="card domain-card">
-        <div class="number">03</div>
-        <h3>Symmetry</h3>
-        <p>
-          The degree of symmetry in the infant's movements
-          and posture.
-        </p>
-      </article>
+<div class="card domain-card">
+<div class="number">03</div>
+<h3>Symmetry</h3>
+<p>
+The degree of symmetry in the infant's movements
+and posture.
+</p>
+</div>
 
-      <article class="card domain-card">
-        <div class="number">04</div>
-        <h3>Fluency</h3>
-        <p>
-          The smoothness and fluency of movements.
-        </p>
-      </article>
+<div class="card domain-card">
+<div class="number">04</div>
+<h3>Fluency</h3>
+<p>
+The smoothness and fluency of movements.
+</p>
+</div>
 
-      <article class="card domain-card">
-        <div class="number">05</div>
-        <h3>Performance</h3>
-        <p>
-          The motor milestones and skills achieved by
-          the infant.
-        </p>
-      </article>
+<div class="card domain-card">
+<div class="number">05</div>
+<h3>Performance</h3>
+<p>
+The motor milestones and skills achieved by the infant.
+</p>
+</div>
 
-      <article class="card domain-card">
-        <div class="number">THE IMP</div>
-        <h3>A broader picture</h3>
-        <p>
-          Together, the five domains provide a
-          multidimensional profile of infant motor behaviour.
-        </p>
-      </article>
+<div class="card domain-card">
+<div class="number">THE IMP</div>
+<h3>A broader picture</h3>
+<p>
+An integrated assessment of infant motor behaviour,
+going beyond motor milestones alone.
+</p>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
+</section>
+
+<!-- PHOTOGRAPHS -->
+
+<section>
+<div class="wrap">
+
+<div class="intro">
+<div class="eyebrow">Infant motor development</div>
+<h2>Discover movement in infancy</h2>
+<p>
+Use this section for photographs illustrating different
+aspects of infant motor behaviour.
+</p>
+</div>
+
+<div class="grid three">
+
+<div>
+<img class="photo"
+src="images/infant-reaching.jpg"
+alt="Infant reaching">
+<p class="photo-caption">Reaching and exploration</p>
+</div>
+
+<div>
+<img class="photo"
+src="images/infant-sitting.jpg"
+alt="Infant sitting">
+<p class="photo-caption">Postural control</p>
+</div>
+
+<div>
+<img class="photo"
+src="images/infant-moving.jpg"
+alt="Infant moving">
+<p class="photo-caption">Motor variability</p>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- VIDEOS -->
 
-<section id="videos">
-  <div class="wrap">
+<section class="light" id="videos">
+<div class="wrap">
 
-    <div class="section-intro">
-      <div class="eyebrow">See the IMP in practice</div>
-      <h2>Video examples</h2>
+<div class="intro">
+<div class="eyebrow">See the IMP in practice</div>
+<h2>Video examples</h2>
 
-      <p>
-        Short video fragments can make the five domains
-        easier to understand. This section is designed
-        for demonstration clips, with a short explanation
-        alongside each example.
-      </p>
-    </div>
+<p>
+Video examples help illustrate how the different
+domains of the IMP can be recognised in infant motor
+behaviour.
+</p>
+</div>
 
-    <div class="grid three">
+<div class="grid three">
 
-      <article class="card video-card">
-        <a href="https://www.youtube.com/results?search_query=Infant+Motor+Profile+IMP+variation"
-           target="_blank" rel="noopener">
-          <div class="video-thumb">
-            <span class="play">▶</span>
-          </div>
-        </a>
+<!-- VIDEO 1: Replace VIDEO_ID with your YouTube video ID -->
 
-        <div class="video-body">
-          <span class="tag">Example 1</span>
-          <h3>Variation</h3>
-          <p>
-            Add a short clip illustrating differences
-            in movement repertoire or movement strategies.
-          </p>
-        </div>
-      </article>
+<div class="card video-card">
 
-      <article class="card video-card">
-        <a href="https://www.youtube.com/results?search_query=Infant+Motor+Profile+IMP+adaptability"
-           target="_blank" rel="noopener">
-          <div class="video-thumb">
-            <span class="play">▶</span>
-          </div>
-        </a>
+<iframe
+src="https://www.youtube.com/embed/VIDEO_ID_1"
+title="IMP example: Variation"
+allowfullscreen>
+</iframe>
 
-        <div class="video-body">
-          <span class="tag">Example 2</span>
-          <h3>Adaptability</h3>
-          <p>
-            Add a clip showing how an infant adjusts
-            movements to reach, grasp or explore.
-          </p>
-        </div>
-      </article>
+<div class="video-description">
+<span class="tag">Domain 1</span>
+<h3>Variation</h3>
+<p>
+Demonstration of different movement strategies
+and movement repertoire.
+</p>
+</div>
+</div>
 
-      <article class="card video-card">
-        <a href="https://www.youtube.com/results?search_query=Infant+Motor+Profile+IMP+performance"
-           target="_blank" rel="noopener">
-          <div class="video-thumb">
-            <span class="play">▶</span>
-          </div>
-        </a>
+<!-- VIDEO 2 -->
 
-        <div class="video-body">
-          <span class="tag">Example 3</span>
-          <h3>Performance</h3>
-          <p>
-            Add a clip illustrating the assessment
-            of age-related motor skills and milestones.
-          </p>
-        </div>
-      </article>
+<div class="card video-card">
 
-    </div>
+<iframe
+src="https://www.youtube.com/embed/VIDEO_ID_2"
+title="IMP example: Adaptability"
+allowfullscreen>
+</iframe>
 
-    <p class="note" style="margin-top:18px">
-      Replace these links with approved demonstration videos.
-      Only publish infant footage with appropriate consent
-      and permissions.
-    </p>
+<div class="video-description">
+<span class="tag">Domain 2</span>
+<h3>Adaptability</h3>
+<p>
+Demonstration of how infants adapt their movements
+to changing situations.
+</p>
+</div>
+</div>
 
-  </div>
+<!-- VIDEO 3 -->
+
+<div class="card video-card">
+
+<iframe
+src="https://www.youtube.com/embed/VIDEO_ID_3"
+title="IMP example: Fluency"
+allowfullscreen>
+</iframe>
+
+<div class="video-description">
+<span class="tag">Domain 3</span>
+<h3>Fluency</h3>
+<p>
+Demonstration of movement fluency and smoothness.
+</p>
+</div>
+</div>
+
+</div>
+
+<p class="note">
+Replace VIDEO_ID_1, VIDEO_ID_2 and VIDEO_ID_3 with
+the actual YouTube video IDs. You can also use Vimeo
+embed links or the MP4 option described in the code comments.
+</p>
+
+<!-- OPTIONAL LOCAL MP4 VIDEO EXAMPLE
+<video controls width="100%" poster="images/video-poster.jpg">
+  <source src="videos/imp-example.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+-->
+
+</div>
 </section>
 
 <!-- CLINICAL APPLICATIONS -->
 
-<section class="peach" id="clinical">
-  <div class="wrap grid">
+<section class="coral-bg" id="clinical">
+<div class="wrap grid">
 
-    <div>
-      <div class="eyebrow">From observation to understanding</div>
-      <h2>Clinical and research applications</h2>
+<div>
+<div class="eyebrow">From observation to understanding</div>
+<h2>Clinical and research applications</h2>
 
-      <p>
-        The IMP can be used to describe infant motor
-        behaviour in clinical follow-up and research.
-        Repeated assessments may help researchers and
-        clinicians examine developmental trajectories
-        and changes over time.
-      </p>
+<p>
+The IMP can be used to describe infant motor behaviour
+in clinical follow-up and research.
+</p>
 
-      <p>
-        Research has explored the IMP's reliability,
-        validity, associations with neurological condition
-        and its relationship with later developmental outcomes.
-      </p>
-    </div>
+<p>
+Repeated assessments may help researchers and clinicians
+examine developmental trajectories and changes over time.
+</p>
 
-    <div class="card">
-      <h3>Who may be interested?</h3>
+<p>
+Research has explored the reliability and validity of
+the IMP, its associations with neurological condition
+and its relationship with later developmental outcomes.
+</p>
+</div>
 
-      <ul>
-        <li>Paediatric physiotherapists</li>
-        <li>Paediatricians and child neurologists</li>
-        <li>Neonatal and follow-up teams</li>
-        <li>Developmental researchers</li>
-        <li>Professionals working with infants at risk of developmental disorders</li>
-      </ul>
+<div class="card">
+<h3>Who may benefit from the IMP?</h3>
 
-      <p class="note">
-        The IMP is an assessment instrument and should be
-        interpreted by appropriately trained professionals
-        within the broader clinical context.
-      </p>
-    </div>
+<ul>
+<li>Paediatric physiotherapists</li>
+<li>Paediatricians and child neurologists</li>
+<li>Neonatal follow-up teams</li>
+<li>Developmental researchers</li>
+<li>Professionals working with infants at risk of developmental disorders</li>
+</ul>
 
-  </div>
+</div>
+
+</div>
 </section>
 
-<!-- PUBLICATIONS -->
+<!-- RESEARCH -->
 
 <section id="research">
-  <div class="wrap">
+<div class="wrap">
 
-    <div class="section-intro">
-      <div class="eyebrow">Evidence and publications</div>
-      <h2>Research on the Infant Motor Profile</h2>
+<div class="intro">
+<div class="eyebrow">Scientific evidence</div>
+<h2>Research and publications</h2>
 
-      <p>
-        A selection of publications introducing the IMP
-        and exploring its measurement properties and
-        clinical relevance.
-      </p>
-    </div>
+<p>
+Explore the scientific background, measurement properties
+and clinical applications of the Infant Motor Profile.
+Click on PubMed to access each publication.
+</p>
+</div>
 
-    <div class="pub-list">
+<div class="publications">
 
-      <article class="publication">
-        <div>
-          <span class="tag">Development</span>
-          <h3>The Infant Motor Profile: a standardized and qualitative method to assess motor behaviour in infancy</h3>
-          <p>Heineman KR, Bos AF, Hadders-Algra M. 2008.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/18279412/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">Development of the IMP</span>
+<h3>The Infant Motor Profile: a standardized and qualitative method to assess motor behaviour in infancy</h3>
+<p>Heineman KR, Bos AF, Hadders-Algra M. 2008.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/18279412/" target="_blank">PubMed ↗</a>
+</div>
 
-      <article class="publication">
-        <div>
-          <span class="tag">Construct validity</span>
-          <h3>Construct validity of the Infant Motor Profile</h3>
-          <p>Heineman KR et al. 2010.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/20477835/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">Construct validity</span>
+<h3>Construct validity of the Infant Motor Profile: relation with prenatal, perinatal, and neonatal risk factors</h3>
+<p>Heineman KR et al. 2010.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/20477835/" target="_blank">PubMed ↗</a>
+</div>
 
-      <article class="publication">
-        <div>
-          <span class="tag">Cerebral palsy</span>
-          <h3>Infant Motor Profile and cerebral palsy</h3>
-          <p>Heineman KR, Bos AF, Hadders-Algra M. 2011.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/21950393/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">Cerebral palsy</span>
+<h3>Infant Motor Profile and cerebral palsy: promising associations</h3>
+<p>Heineman KR, Bos AF, Hadders-Algra M. 2011.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/21950393/" target="_blank">PubMed ↗</a>
+</div>
 
-      <article class="publication">
-        <div>
-          <span class="tag">Reliability and validity</span>
-          <h3>Reliability and concurrent validity of the Infant Motor Profile</h3>
-          <p>Heineman KR et al. 2013.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/23480426/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">Reliability and validity</span>
+<h3>Reliability and concurrent validity of the Infant Motor Profile</h3>
+<p>Heineman KR et al. 2013.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/23480426/" target="_blank">PubMed ↗</a>
+</div>
 
-      <article class="publication">
-        <div>
-          <span class="tag">Reliability</span>
-          <h3>Inter- and Intrarater Reliability of the Infant Motor Profile in 3- to 18-Month-Old Infants</h3>
-          <p>Hecker E et al. 2016.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/26901537/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">Reliability</span>
+<h3>Inter- and Intrarater Reliability of the Infant Motor Profile in 3- to 18-Month-Old Infants</h3>
+<p>Hecker E et al. 2016.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/26901537/" target="_blank">PubMed ↗</a>
+</div>
 
-      <article class="publication">
-        <div>
-          <span class="tag">Cognitive outcome</span>
-          <h3>Motor development in infancy is related to cognitive function at 4 years of age</h3>
-          <p>Heineman KR et al. 2018.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/29633244/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">Cognitive outcome</span>
+<h3>Motor development in infancy is related to cognitive function at 4 years of age</h3>
+<p>Heineman KR et al. 2018.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/29633244/" target="_blank">PubMed ↗</a>
+</div>
 
-      <article class="publication">
-        <div>
-          <span class="tag">Primary health care</span>
-          <h3>Intra- and Inter-Rater Reliability of the Infant Motor Profile in Infants in Primary Health Care</h3>
-          <p>Tveten KM et al. 2020.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/32003280/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">Primary health care</span>
+<h3>Intra- and Inter-Rater Reliability of the Infant Motor Profile in Infants in Primary Health Care</h3>
+<p>Tveten KM et al. 2020.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/32003280/" target="_blank">PubMed ↗</a>
+</div>
 
-      <article class="publication">
-        <div>
-          <span class="tag">Predictive validity</span>
-          <h3>Concurrent and predictive validity of the infant motor profile</h3>
-          <p>Rizzi R et al. 2021.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/33549070/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">Predictive validity</span>
+<h3>Concurrent and predictive validity of the infant motor profile in infants at risk of neurodevelopmental disorders</h3>
+<p>Rizzi R et al. 2021.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/33549070/" target="_blank">PubMed ↗</a>
+</div>
 
-      <article class="publication">
-        <div>
-          <span class="tag">School-age outcome</span>
-          <h3>Infant motor behaviour and functional and cognitive outcome at school-age</h3>
-          <p>Straathof EJM et al. 2022.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/35689969/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">School-age outcome</span>
+<h3>Infant motor behaviour and functional and cognitive outcome at school-age: A follow-up study in very high-risk children</h3>
+<p>Straathof EJM et al. 2022.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/35689969/" target="_blank">PubMed ↗</a>
+</div>
 
-      <article class="publication">
-        <div>
-          <span class="tag">International application</span>
-          <h3>Infant motor profile (IMP): translation and concurrent validity for Brazilian infants</h3>
-          <p>Machado LR et al. 2026.</p>
-        </div>
-        <a class="pub-link"
-           href="https://pubmed.ncbi.nlm.nih.gov/42815209/"
-           target="_blank" rel="noopener">PubMed ↗</a>
-      </article>
+<div class="publication">
+<div>
+<span class="tag">International validation</span>
+<h3>Infant motor profile (IMP): translation and concurrent validity for Brazilian infants</h3>
+<p>Machado LR et al. 2026.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/42815209/" target="_blank">PubMed ↗</a>
+</div>
 
-    </div>
+<div class="publication">
+<div>
+<span class="tag">Scoping review protocol</span>
+<h3>Psychometric properties of the Infant Motor Profile (IMP): A scoping review protocol</h3>
+<p>Machado LR et al. 2022.</p>
+</div>
+<a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/36383624/" target="_blank">PubMed ↗</a>
+</div>
 
-    <p class="note" style="margin-top:20px">
-      Initial publication selection. Verify bibliographic
-      details and completeness before publication.
-    </p>
+</div>
 
-  </div>
+<p class="note">
+This is an initial selection of publications. Further
+IMP-related research can be added as it becomes available.
+</p>
+
+</div>
 </section>
 
-<!-- TRAINING AND CONTACT -->
+<!-- TRAINING -->
+
+<section class="turquoise-bg" id="training">
+<div class="wrap grid">
+
+<div>
+<div class="eyebrow">Learn to use the IMP</div>
+<h2>Become an IMP-trained professional</h2>
+
+<p>
+The IMP offers professionals a structured way to assess
+infant motor behaviour beyond the achievement of motor
+milestones.
+</p>
+
+<p>
+Training enables professionals to become familiar with
+the assessment procedure, video analysis and scoring
+of the five domains.
+</p>
+
+<p>
+Add information here about available training courses,
+certification requirements, training dates and registration.
+</p>
+
+<a href="#contact" class="btn">Enquire about IMP training</a>
+</div>
+
+<div>
+<img class="photo"
+src="images/imp-training.jpg"
+alt="Professional observing infant motor behaviour">
+<p class="photo-caption">
+Learning to observe and understand infant movement.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
-  <div class="wrap grid">
+<div class="wrap grid">
 
-    <div>
-      <div class="eyebrow" style="color:#c5dfd4">
-        Learn more
-      </div>
+<div>
+<div class="eyebrow">Get in touch</div>
+<h2>Interested in the IMP?</h2>
 
-      <h2>Interested in the IMP?</h2>
+<p>
+Would you like to learn more about the IMP, explore
+training opportunities or discuss research collaborations?
+Please get in touch.
+</p>
+</div>
 
-      <p>
-        For information about the assessment, the manual,
-        training opportunities or research collaborations,
-        please get in touch.
-      </p>
-    </div>
+<div>
+<h3 style="color:white">Contact</h3>
 
-    <div>
-      <p><strong>Contact</strong></p>
+<p>
+[Name / IMP team]<br>
+Developmental Neurology<br>
+Beatrix Children's Hospital<br>
+University Medical Center Groningen<br>
+The Netherlands
+</p>
 
-      <p>
-        [Your name / IMP team]<br>
-        [Department / institution]<br>
-        [Email address]
-      </p>
+<p>
+[Email address]
+</p>
 
-      <p>
-        <a href="https://infantmotorprofile.com/"
-           target="_blank" rel="noopener">
-          Visit the IMP app and manual website ↗
-        </a>
-      </p>
-    </div>
+</div>
 
-  </div>
+</div>
 </section>
 
 </main>
 
 <footer>
-  <div class="wrap">
-    © [Year] Infant Motor Profile · [Institution / rights holder]
-    · Add copyright, privacy and image/video permission information.
-  </div>
+<div class="wrap">
+<strong>Infant Motor Profile</strong><br>
+Developmental Neurology · Beatrix Children's Hospital<br>
+University Medical Center Groningen · University of Groningen<br>
+© [Year] · All rights reserved.
+</div>
 </footer>
 
 </body>
