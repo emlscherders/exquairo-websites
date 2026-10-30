@@ -1,11 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Website from Fernando in exquAIro</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #27ae60;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .weekend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .weekend-item {
+            background: #eef2f3;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .weekend-item h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Hello, world of Fernando!</h1>
+    <header>
+        <h1>Hello, world of Fernando in exquAIro!</h1>
+        <p>Welcome to my personal repository and portfolio.</p>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2>About Me</h2>
+            <p>Welcome to my page! I am passionate about technology, continuous learning, and sports. When I'm not focused on exquAIro during the week, you can find me on the sports field.</p>
+        </section>
+
+        <section class="card">
+            <h2>My Weekend Life on the Field 🏑</h2>
+            <p>Field hockey is a huge part of my life, and I dedicate my weekends to the sport in two completely different ways:</p>
+            
+            <div class="weekend-grid">
+                <div class="weekend-item">
+                    <h3>Saturdays</h3>
+                    <p>I serve as a <strong>field hockey referee</strong>. This is voluntary work that allows me to give back to the community, uphold the rules of the game, and support local athletes.</p>
+                </div>
+                
+                <div class="weekend-item">
+                    <h3>Sundays</h3>
+                    <p>I step into the role of <strong>hockey coach</strong>. The best part of my Sunday is getting to coach alongside my oldest daughter, sharing our passion for the game together.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fernando. Hosted on GitHub Pages.</p>
+    </footer>
 
 </body>
 </html>
